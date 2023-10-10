@@ -1,0 +1,415 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "CarVach API",
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "http://4.144.144.23:5000"
+    }
+  ],
+  "paths": {
+    "/api/v1/vehicles/{vehicleId}/location": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Location",
+        "operationId": "get_location_api_v1_vehicles__vehicleId__location_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Vehicle Details",
+        "operationId": "get_vehicle_details_api_v1_vehicles__vehicleId__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/odometer": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Odometer Reading",
+        "operationId": "get_odometer_reading_api_v1_vehicles__vehicleId__odometer_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/battery": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Battery Charge Level",
+        "operationId": "get_battery_charge_level_api_v1_vehicles__vehicleId__battery_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/chargingStatus": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Charging Status",
+        "operationId": "get_charging_status_api_v1_vehicles__vehicleId__chargingStatus_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/fuel": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Fuel Amount",
+        "operationId": "get_fuel_amount_api_v1_vehicles__vehicleId__fuel_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/tiresPressure": {
+      "get": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Get Tires Pressure",
+        "operationId": "get_tires_pressure_api_v1_vehicles__vehicleId__tiresPressure_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/lock": {
+      "post": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Lock",
+        "operationId": "lock_api_v1_vehicles__vehicleId__lock_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/{vehicleId}/unlock": {
+      "post": {
+        "tags": [
+          "CarVach API reference"
+        ],
+        "summary": "Unlock",
+        "operationId": "unlock_api_v1_vehicles__vehicleId__unlock_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Vehicleid"
+            },
+            "name": "vehicleId",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "loc": {
+            "title": "Location",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
